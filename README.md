@@ -111,9 +111,14 @@ You can enhance the web interface by editing the `index.html`, `styles.css`, and
 
 ---
 
-## **Contributors**
+## **Contributors**  
+### **By Team 3**  
 - **Lebi Raja**  
-  Artificial Intelligence & Data Science Student, Karunya University.
+- **Jayasurya**  
+- **Maniprakash**  
+- **Joshua**  
+
+--- 
 
 ---
 
