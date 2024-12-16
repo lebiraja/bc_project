@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .container {
+    text-align: center;
+    max-width: 900px;
+    margin: auto;
+  }
+  
+  h1 {
+    color: #333;
+    font-size: 2.5em;
+  }
+  
+  .subheading {
+    color: #777;
+    font-size: 1.2em;
+  }
+  
+  .parking-info {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+  }
+  
+  .parking-layout {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .parking-slot {
+    width: 60px;
+    height: 60px;
+    background-color: #ccc;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+  
+  .parking-slot.available {
+    background-color: #28a745;
+  }
+  
+  .parking-slot.occupied {
+    background-color: #dc3545;
+  }
+  
+  button.start-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  button.start-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .status {
+    margin-bottom: 20px;
+  }
+  
