@@ -1,128 +1,110 @@
-
-
-## **Overview**
-This project is a real-time parking lot detection system that uses **YOLOv8** (You Only Look Once) for detecting cars and determining the number of vacant parking slots. The system integrates a Python-based backend with a modern web interface to display live results and start camera detection directly from the browser.
+### **SMART-PARKING-SYSTEM 🚗**  
 
 ---
 
-## **Features**
-- **Real-time car detection** using YOLOv8.
-- Counts the number of cars and calculates available parking slots.
-- A web interface with animations to start the detection process.
-- Fully responsive and modern UI design.
-- Easy to set up and run on any system with a webcam.
+<h1 align="center">SMART-PARKING-SYSTEM</h1>  
+<p align="center">
+  <a href="#">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQfaTiGrhKrZ__y70ByRq6I8cSW2m8EMRTGhlCGGP0KpXQQde5R&usqp=CAU" alt="Logo" width="auto" height="auto">
+  </a>
+</p>  
 
 ---
 
-## **Requirements**
-
-### **Python Dependencies**
-- Python 3.9+
-- `opencv-python`
-- `ultralytics`
-- `flask`
-- `flask-cors`
-- `numpy`
-
-Install these dependencies using:
-```bash
-pip install opencv-python ultralytics flask flask-cors numpy
-```
-
-### **Frontend Dependencies**
-The frontend is built with HTML, CSS, and JavaScript. No additional dependencies are required for the web interface.
+## **📕 Abstract**  
+The **SMART-PARKING-SYSTEM** leverages image processing techniques to automate the detection of available parking slots in real-time. Aimed at reducing human involvement and traffic congestion in parking lots, this system uses a high-definition camera and software to provide parking guidance. By analyzing images from parking lots, the system identifies vacant slots, displays their locations, and navigates drivers to these spaces. This cost-effective, automated system ensures efficient parking lot management while enhancing the user experience.  
 
 ---
 
-## **Setup Instructions**
+## **📜 Introduction**  
+With the increasing number of vehicles in urban areas, finding available parking spaces has become a significant challenge. Drivers often waste valuable time and fuel navigating through parking lots. The **SMART-PARKING-SYSTEM** addresses these issues by:  
+1. Capturing real-time images of parking areas using CCTV cameras.  
+2. Detecting cars and empty parking spaces using image processing techniques.  
+3. Guiding drivers to available slots, optimizing space utilization.  
 
-### **1. Clone the Repository**
-```bash
-git clone https://github.com/your-repository/parking-lot-detection.git
-cd parking-lot-detection
-```
-
-### **2. Set Up Python Backend**
-1. Ensure all dependencies are installed using the `pip install` command above.
-2. Run the backend server:
-   ```bash
-   python app.py
-   ```
-
-### **3. Run the Frontend**
-1. Open the `index.html` file in any modern browser (preferably Google Chrome).
-2. Alternatively, host the frontend locally with any server (e.g., `http-server` for Node.js).
-
-### **4. Start the Detection**
-1. Click the **"Start Camera"** button on the webpage.
-2. The backend will activate the webcam and begin detecting cars.
+This project utilizes MATLAB as the primary development platform, providing a scalable and cost-effective parking management solution.  
 
 ---
 
-## **Usage**
-1. Open the web application.
-2. Ensure the camera is connected and the parking lot is in the frame.
-3. The system will automatically detect cars and display:
-   - Total parking slots.
-   - Number of occupied slots.
-   - Number of vacant slots.
-4. Press **"q"** in the camera window to stop detection.
+## **📃 Proposed Model and Methodology**  
+The system operates in five key stages:  
+
+### **1. System Initialization**  
+- A reference image of an empty parking lot is captured at the time of installation.  
+- The image serves as a baseline for identifying parking slots.  
+
+### **2. Image Acquisition**  
+- Real-time images of the parking lot are captured using CCTV cameras.  
+- Images are processed in MATLAB to identify changes (e.g., parked cars).  
+
+### **3. Thresholding and Image Processing**  
+- Captured images are converted to grayscale and binary formats.  
+- Binary images are processed using morphological operations and filters to eliminate noise and improve accuracy.  
+
+### **4. Image Detection**  
+- Blob analysis is performed to identify cars and count their numbers.  
+- The system calculates the number of vacant slots based on this analysis.  
+
+### **5. Parking Guidance**  
+- Real-time information about available slots is displayed for drivers.  
+- Drivers are navigated to the nearest vacant slot efficiently.  
 
 ---
 
-## **File Structure**
-```
-parking-lot-detection/
-│
-├── app.py               # Python backend for real-time car detection
-├── yolo_camera.py       # YOLOv8-based car detection logic
-├── templates/
-│   └── index.html       # Main frontend file
-├── static/
-│   ├── css/
-│   │   └── styles.css   # Styling for the web application
-│   ├── js/
-│   │   └── app.js       # JavaScript for interactivity and animations
-├── README.md            # Project documentation
-└── .vscode/
-    └── launch.json      # Debugging configuration for VS Code
-```
+## **📄 Algorithm**  
+The main algorithm steps include:  
+1. Capture live video stream from the parking lot using cameras.  
+2. Extract images from the video stream.  
+3. Convert RGB images to binary images.  
+4. Divide images lane-wise and process each lane sequentially.  
+5. Detect vacant slots by comparing live images with the reference image.  
+6. Display the location of available slots and guide drivers accordingly.  
 
 ---
 
-## **Customization**
+## **📸 Screenshots**  
 
-### **1. Change Total Slots**
-Update the `total_slots` variable in the `yolo_camera.py` file:
-```python
-total_slots = 36  # Adjust based on your parking lot
-```
+### **Command Window Output**  
+<p align="center">
+  <a href="#">
+    <img src="https://raw.githubusercontent.com/abhishekapk/SMART-PARKING-SYSTEM/master/Images/image7.jpg" alt="Command Window Output" width="auto" height="auto">
+  </a>
+</p>  
 
-### **2. Modify Frontend**
-You can enhance the web interface by editing the `index.html`, `styles.css`, and `app.js` files located in the `static` folder.
+### **Parking Lot Observation**  
+- **Figure 1**: Overall view of the parking lot.  
+<p align="center">
+  <a href="#">
+    <img src="https://raw.githubusercontent.com/abhishekapk/SMART-PARKING-SYSTEM/master/Images/image8.jpg" alt="Figure 1" width="auto" height="auto">
+  </a>
+</p>  
+
+- **Figure 2**: Lane-wise parking observation with vacant slot detection.  
+<p align="center">
+  <a href="#">
+    <img src="https://raw.githubusercontent.com/abhishekapk/SMART-PARKING-SYSTEM/master/Images/image9.jpg" alt="Figure 2" width="auto" height="auto">
+  </a>
+</p>  
 
 ---
 
-## **Future Improvements**
-- Use a pre-trained parking dataset for better accuracy in detecting vacant slots.
-- Add support for multiple cameras.
-- Display real-time analytics on the web interface.
-- Deploy the system to a cloud server for remote access.
+## **📑 Conclusion**  
+The **SMART-PARKING-SYSTEM** offers a robust and scalable solution for managing parking lots in urban areas. By using image processing techniques, the system efficiently detects and manages parking spaces while minimizing human involvement and operational costs.  
+**Future Scope**:  
+- Integration with online parking reservation systems.  
+- Mobile app support for real-time slot booking.  
+- Enhanced security through vehicle tracking.  
 
 ---
 
-## **Contributors**  
-### **By Team 3**  
+## **📜 License**  
+This project is licensed under the MIT License.  
+
+---
+
+## **💻 Team Members**  
+Developed by **Team 3**:  
 - **Lebi Raja**  
 - **Jayasurya**  
 - **Maniprakash**  
 - **Joshua**  
-
---- 
-
----
-
-## **License**
-This project is licensed under the MIT License.
-
---- 
